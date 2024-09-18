@@ -1,4 +1,6 @@
-package polyinterface_new;
+package polygon;
+
+import polygon.interfaces.Geom2D;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -25,6 +27,12 @@ public class Circle implements Geom2D {
 	}
 
 	@Override
+	public void drawShape(Graphics g, int offsetX, int offsetY) {
+		g.setColor(Color.RED);
+		g.fillOval(100, 100, radius, radius);
+	}
+
+	@Override
 	public void drawIllustration() {
 
 		JFrame fr = new JFrame();
@@ -34,8 +42,7 @@ public class Circle implements Geom2D {
 		JPanel pn1 = new JPanel() {
 			@Override
 			public void paint(Graphics g) {
-				g.setColor(Color.RED);
-				g.fillOval(100, 100, radius, radius);
+				drawShape(g, 0, 0);
 			}
 		};
 

@@ -1,4 +1,8 @@
-package polyinterface_new;
+package polygon;
+
+import polygon.interfaces.Geom2D;
+
+import java.awt.*;
 
 public class RightTriangle implements Geom2D {
 
@@ -15,5 +19,9 @@ public class RightTriangle implements Geom2D {
     @Override
     public void drawIllustration() {
 
+    }
+
+    @Override
+    public void drawShape(Graphics g, int offsetX, int offsetY) {
     }
 }

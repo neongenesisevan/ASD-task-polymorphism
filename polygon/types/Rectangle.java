@@ -1,4 +1,6 @@
-package polyinterface_new;
+package polygon;
+
+import polygon.interfaces.Geom2D;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,6 +32,12 @@ public class Rectangle implements Geom2D {
 	}
 
 	@Override
+	public void drawShape(Graphics g, int offsetX, int offsetY) {
+		g.setColor(Color.BLUE);
+		g.fillRect(offsetX, offsetY, length, width);
+	}
+
+	@Override
 	public void drawIllustration() {
 		
 		JFrame fr = new JFrame();
@@ -39,8 +47,7 @@ public class Rectangle implements Geom2D {
 		JPanel pn1 = new JPanel() {
 			@Override
 			public void paint(Graphics g) {
-				g.setColor(Color.BLUE);
-				g.fillRect(100, 100, length, width);
+				drawShape(g, 0, 0);
 			}
 		};
 		

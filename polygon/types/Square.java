@@ -1,4 +1,6 @@
-package polyinterface_new;
+package polygon.types;
+
+import polygon.interfaces.Geom2D;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -30,6 +32,12 @@ public class Square implements Geom2D {
 	}
 
 	@Override
+	public void drawShape(Graphics g, int offsetX, int offsetY) {
+		g.setColor(Color.BLUE);
+		g.fillRect(offsetX, offsetY, (int) side, (int) side);
+	}
+
+	@Override
 	public void drawIllustration() {
 		
 		JFrame fr = new JFrame();
@@ -39,8 +47,7 @@ public class Square implements Geom2D {
 		JPanel pn1 = new JPanel() {
 			@Override
 			public void paint(Graphics g) {
-				g.setColor(Color.BLUE);
-				g.fillRect(100, 100, (int) side, (int) side);
+				drawShape(g, 100, 100);
 			}
 		};
 		
