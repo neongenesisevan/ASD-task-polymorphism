@@ -1,31 +1,32 @@
 package polyinterface_new;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+public class Rectangle implements Geom2D {
 
-public class Square implements Geom2D {
-	
-	private double side;
-	
-	public Square(double side) {
-		this.side = side;
+	private int length;
+	private int width;
+
+	public Rectangle(int length, int width) {
+		this.length = length;
+		this.width = width;
+
 	}
 
 	@Override
 	public double getArea() {
-		return Math.pow(side, 2);
+		return length * width;
 	}
 
 	@Override
 	public double getPerimeter() {
-		return 4*side;
+		return length * 2 + width * 2;
 	}
 
+	@Override
 	public String toString() {
-		return "This is a square with sides length: " + side;
+		return "This is a rectangle with length: " + length + " and width: " + width;
 	}
 
 	@Override
@@ -39,7 +40,7 @@ public class Square implements Geom2D {
 			@Override
 			public void paint(Graphics g) {
 				g.setColor(Color.BLUE);
-				g.fillRect(100, 100, (int) side, (int) side);
+				g.fillRect(100, 100, length, width);
 			}
 		};
 		
