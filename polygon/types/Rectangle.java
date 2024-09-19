@@ -2,8 +2,11 @@ package polygon.types;
 
 import polygon.interfaces.Geom2D;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Rectangle implements Geom2D {
 
@@ -27,13 +30,8 @@ public class Rectangle implements Geom2D {
 	}
 
 	@Override
-	public String toString() {
-		return "This is a rectangle with length: " + length + " and width: " + width;
-	}
-
-	@Override
 	public void drawShape(Graphics g, int offsetX, int offsetY) {
-		g.setColor(Color.BLUE);
+		g.setColor(Color.GREEN);
 		g.fillRect(offsetX, offsetY, length, width);
 	}
 
@@ -53,5 +51,10 @@ public class Rectangle implements Geom2D {
 		
 		fr.add(pn1);
 		fr.setVisible(true);	
+	}
+
+	@Override
+	public String toString() {
+		return "This is a rectangle with length: " + length + " and width: " + width;
 	}
 }
