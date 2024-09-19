@@ -1,19 +1,18 @@
 package shapes2d.menus;
 
-import polygon.types.Circle;
-import polygon.types.Rectangle;
-import polygon.types.RightTriangle;
-import polygon.types.Square;
+import polygon.types.*;
 import shapes2d.Main;
 
 import java.util.Scanner;
 
 public class ShapeCreationMenu implements Menu {
 
+    private int returnInt = 6;
+
     @Override
     public Menu processInput(int input) {
 
-        if (input == 4) {
+        if (input == returnInt) {
             return Menus.mainMenu;
         }
 
@@ -58,6 +57,30 @@ public class ShapeCreationMenu implements Menu {
                         new Square(sideLength), x, y
                 );
                 return this;
+            case 4:
+                System.out.println("topLength: ");
+                int topLength = sc.nextInt();
+                System.out.println("bottomLength: ");
+                int bottomLength = sc.nextInt();
+                System.out.println("height: ");
+                int height_ = sc.nextInt();
+
+                Main.instanceData.selectedWorld.addShape(
+                        new RightTrapezium(topLength, bottomLength, height_), x, y
+                );
+                return this;
+            case 5:
+                System.out.println("base: ");
+                int base_ = sc.nextInt();
+                System.out.println("height: ");
+                int height__ = sc.nextInt();
+                System.out.println("side length: ");
+                int sideLength_ = sc.nextInt();
+
+                Main.instanceData.selectedWorld.addShape(
+                        new Parallelogram(base_, height__, sideLength_), x, y
+                );
+                return this;
             default:
                 return this;
         }
@@ -73,7 +96,9 @@ public class ShapeCreationMenu implements Menu {
                 "(1): Rectangle \n" +
                 "(2): RightTriangle \n" +
                 "(3): Square \n" +
-                "(4): Back \n"
+                "(4): Right Trapezium \n" +
+                        "(5): Parallelogram \n" +
+                "(" + returnInt +"): Back \n"
         );
     }
 }
