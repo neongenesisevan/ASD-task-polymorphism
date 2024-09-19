@@ -6,16 +6,26 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    public void printHeader() {
+    private static void printHeader() {
         System.out.println("Welcome to the 2D shapes application.");
     }
 
-    public void getUserInput() {
-        Scanner scanner = new Scanner(System.in);
+    public static void getUserInput() {
+        Scanner sc = new Scanner(System.in);
+        printHeader();
 
+        while (true) {
+            // do shit
+
+            if (true) {
+                break;
+            }
+        }
+        Main.init();
+        System.out.println("Thank you for using our amazing software");
     }
 
-    public Geom2D getShape(String shapeName) {
+    private static Geom2D getShape(String shapeName) {
         switch (shapeName) {
             default:
                 throw new IllegalArgumentException("Shape " + shapeName + " does not exist!!!");
