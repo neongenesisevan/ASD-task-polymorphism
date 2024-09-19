@@ -1,12 +1,5 @@
 package shapes2d;
 
-import graphics.ShapeDrawerPanel;
-import polygon.interfaces.Geom2D;
-import polygon.types.Circle;
-import polygon.types.Rectangle;
-import polygon.types.RightTriangle;
-import polygon.types.Square;
-
 import javax.swing.JFrame;
 import java.util.ArrayList;
 import java.util.List;

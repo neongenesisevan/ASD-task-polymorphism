@@ -1,6 +1,6 @@
 package shapes2d;
 
-import polygon.interfaces.Geom2D;
+import polygon.Geom2D;
 import shapes2d.menus.MainMenu;
 import shapes2d.menus.Menu;
 

@@ -1,7 +1,7 @@
 package shapes2d.menus;
 
 import polygon.data.ShapeEntity;
-import polygon.interfaces.Geom2D;
+import polygon.Geom2D;
 
 public class ShapeIdentificationMenu implements Menu {
 

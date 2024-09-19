@@ -1,6 +1,6 @@
 package polygon.types;
 
-import polygon.interfaces.Geom2D;
+import polygon.Geom2D;
 
 import java.awt.Color;
 import java.awt.Graphics;

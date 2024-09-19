@@ -1,4 +1,4 @@
-package polygon.interfaces;
+package polygon;
 
 import java.awt.*;
 
