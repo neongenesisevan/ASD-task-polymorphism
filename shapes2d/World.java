@@ -7,7 +7,7 @@ import polygon.interfaces.Geom2D;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InstanceData {
+public class World {
     public List<ShapeEntity> shapesList = new ArrayList<>();
     public ShapeDrawerPanel drawer = new ShapeDrawerPanel(this);
 

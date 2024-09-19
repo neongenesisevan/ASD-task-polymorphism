@@ -1,10 +1,12 @@
-package polygon;
+package polygon.data;
 
 import polygon.interfaces.Geom2D;
 
-public class ShapeEntity {
-    Geom2D shape;
+import java.awt.*;
 
+public class ShapeEntity {
+
+    protected Geom2D shape;
     public int positionX = 0;
     public int positionY = 0;
 
@@ -16,5 +18,9 @@ public class ShapeEntity {
         this.shape = shape;
         this.positionX = positionX;
         this.positionY = positionY;
+    }
+
+    public void draw(Graphics g) {
+        shape.drawShape(g, positionX, positionY);
     }
 }

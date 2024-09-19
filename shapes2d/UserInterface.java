@@ -1,6 +1,6 @@
 package shapes2d;
 
-import polyinterface_new.*;
+import polygon.interfaces.Geom2D;
 
 import java.util.Scanner;
 

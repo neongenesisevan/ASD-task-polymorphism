@@ -1,41 +1,41 @@
 package shapes2d;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Polygon;
-import java.awt.RenderingHints;
+import polygon.interfaces.Geom2D;
+import polygon.types.Square;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 
-public class Shape2D {
+public class Main {
 
+	protected static InstanceData instanceData = new InstanceData();
 	public static void main(String[] args) {
+		init();
+	}
+
+	private static void init() {
 		JFrame fr = new JFrame();
 		fr.setBounds(50, 50, 450, 500);
 		fr.setDefaultCloseOperation(3);
-		
-		JPanel pn1 = new JPanel() {
-			@Override
-			public void paint(Graphics g) {
-				g.setColor(Color.RED);
-				// g.fillRect(100, 100, 250, 250);
-				g.fillOval(100, 100, 250, 250);
 
-				Graphics2D g2 = (Graphics2D)g.create();
-				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-				g2.setColor(Color.RED);
-				g2.fill(new Polygon(new int[]{220, 60, 380}, 
-						new int[]{80, 380, 380}, 3));
+		instanceData.newWorld();
 
-			}
-		};
-		
-		fr.add(pn1);
+		for (int i = 0; i < 100; i++) {
+			instanceData.selectedWorld.addShape(new Square((int) (Math.random() * 50 + 50)), (int) (Math.random() * 1000), (int) (Math.random() * 1000));
+		}
+
+		fr.add(instanceData.selectedWorld.drawer);
 		fr.setVisible(true);
 
-	}
+		instanceData.newWorld();
 
+		instanceData.selectWorld(1);
+
+		for (int i = 0; i < 100; i++) {
+			instanceData.selectedWorld.addShape(new Square((int) (Math.random() * 50 + 50)), (int) (Math.random() * 1000), (int) (Math.random() * 1000));
+		}
+
+		fr.add(instanceData.selectedWorld.drawer);
+		fr.setVisible(true);
+	}
 }

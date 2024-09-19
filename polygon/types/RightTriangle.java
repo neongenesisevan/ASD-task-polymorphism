@@ -1,4 +1,4 @@
-package polygon;
+package polygon.types;
 
 import polygon.interfaces.Geom2D;
 

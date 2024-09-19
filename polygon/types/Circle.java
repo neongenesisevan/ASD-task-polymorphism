@@ -1,4 +1,4 @@
-package polygon;
+package polygon.types;
 
 import polygon.interfaces.Geom2D;
 
@@ -29,7 +29,7 @@ public class Circle implements Geom2D {
 	@Override
 	public void drawShape(Graphics g, int offsetX, int offsetY) {
 		g.setColor(Color.RED);
-		g.fillOval(100, 100, radius, radius);
+		g.fillOval(offsetX, offsetY, radius, radius);
 	}
 
 	@Override
