@@ -15,6 +15,10 @@ public class InstanceData {
         }
     }
 
+    public List<World> getWorlds() {
+        return worlds;
+    }
+
     public void selectWorld(int i) {
         selectedWorld = worlds.get(i);
     }

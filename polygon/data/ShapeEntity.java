@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class ShapeEntity {
 
-    protected Geom2D shape;
+    public Geom2D shape;
     public int positionX = 0;
     public int positionY = 0;
 
@@ -22,5 +22,9 @@ public class ShapeEntity {
 
     public void draw(Graphics g) {
         shape.drawShape(g, positionX, positionY);
+    }
+
+    public void printPosition() {
+        System.out.println("(" + positionX + ", " + positionY + ")");
     }
 }
