@@ -1,7 +1,7 @@
 package shapes2d;
 
 import graphics.ShapeDrawerPanel;
-import polygon.data.ShapeEntity;
+import polygon.ShapeEntity;
 import polygon.Geom2D;
 
 import java.util.ArrayList;

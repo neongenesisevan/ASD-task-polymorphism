@@ -15,7 +15,7 @@ public class MainMenu implements Menu {
             case 1:
                 return Menus.shapeCreationMenu;
             case 2:
-                return Menus.shapeSelectionMenu; //todo
+                return Menus.shapeSelectionMenu;
             case 3:
                 System.out.println("World successfully created!");
                 JFrame fr = Main.newFrame();

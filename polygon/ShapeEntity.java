@@ -1,6 +1,4 @@
-package polygon.data;
-
-import polygon.Geom2D;
+package polygon;
 
 import java.awt.*;
 

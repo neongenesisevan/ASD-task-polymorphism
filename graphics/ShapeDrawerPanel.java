@@ -1,6 +1,6 @@
 package graphics;
 
-import polygon.data.ShapeEntity;
+import polygon.ShapeEntity;
 import shapes2d.World;
 
 import javax.swing.*;

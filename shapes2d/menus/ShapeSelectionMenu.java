@@ -1,6 +1,6 @@
 package shapes2d.menus;
 
-import polygon.data.ShapeEntity;
+import polygon.ShapeEntity;
 import shapes2d.Main;
 
 import java.util.List;
