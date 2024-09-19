@@ -1,6 +1,9 @@
 package shapes2d.menus;
 
+import shapes2d.InstanceData;
 import shapes2d.Main;
+
+import javax.swing.*;
 
 public class MainMenu implements Menu {
 
@@ -15,7 +18,8 @@ public class MainMenu implements Menu {
                 return Menus.shapeSelectionMenu; //todo
             case 3:
                 System.out.println("World successfully created!");
-                Main.instanceData.newWorld();
+                JFrame fr = Main.newFrame();
+                fr.add(Main.instanceData.newWorld().drawer);
                 return this;
             case 4:
                 return Menus.worldSelectionMenu;
@@ -26,7 +30,7 @@ public class MainMenu implements Menu {
 
     @Override
     public void printMenuHeader() {
-        System.out.println("Main Menu \n");
+        System.out.println("Main Menu (" + Main.instanceData.selectedWorld + ")");
 
         System.out.println(
                 "(0): Exit \n" +

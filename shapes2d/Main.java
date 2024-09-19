@@ -8,6 +8,8 @@ import polygon.types.RightTriangle;
 import polygon.types.Square;
 
 import javax.swing.JFrame;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -16,22 +18,31 @@ public class Main {
 	public static void main(String[] args) {
 		UserInterface.getUserInput();
 	}
-	public static JFrame fr = new JFrame();
+	public static List<JFrame> frames = new ArrayList<>();
 
 	protected static void init() {
+
+		String me = "World 0";
+		World world = instanceData.newWorld();
+		JFrame fr = new JFrame();
+
+		frames.add(fr);
+
 		fr.setBounds(50, 50, 450, 500);
 		fr.setDefaultCloseOperation(3);
 
-		instanceData.newWorld();
+		world.execute(me);
 
-		fr.add(instanceData.selectedWorld.drawer);
+		fr.add(world.drawer);
 		fr.setVisible(true);
 	}
 
-	public static void resetFr() {
-
+	public static JFrame newFrame() {
+		JFrame fr = new JFrame();
+		frames.add(fr);
+		fr.setBounds(50, 50, 450, 500);
+		fr.setDefaultCloseOperation(3);
 		fr.setVisible(true);
-		fr.revalidate();
-		fr.repaint();
+		return fr;
 	}
 }

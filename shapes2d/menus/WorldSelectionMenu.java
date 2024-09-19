@@ -20,6 +20,6 @@ public class WorldSelectionMenu implements Menu {
         System.out.println("World Selection \n");
 
         for (int i = 0; i < Main.instanceData.getWorlds().size(); i++)
-            System.out.println("(" + i + ")" + " World_" + i);
+            System.out.println("(" + i + ")" + Main.instanceData.getWorlds().get(i));
     }
 }
