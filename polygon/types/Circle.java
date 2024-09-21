@@ -1,17 +1,14 @@
 package polygon.types;
 
 import polygon.Geom2D;
-
 import java.awt.Color;
 import java.awt.Graphics;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Circle implements Geom2D {
 	
 	public int radius;
-	
 	public Circle(int radius) {
 		this.radius = radius;
 	}
@@ -31,10 +28,8 @@ public class Circle implements Geom2D {
 		g.setColor(Color.RED);
 		g.fillOval(offsetX, offsetY, radius, radius);
 	}
-
 	@Override
 	public void drawIllustration() {
-
 		JFrame fr = new JFrame();
 		fr.setBounds(50, 50, 450, 500);
 		fr.setDefaultCloseOperation(3);
@@ -47,13 +42,10 @@ public class Circle implements Geom2D {
 		};
 
 		fr.add(pn1);
-		fr.setVisible(true);	
-		
+		fr.setVisible(true);
 	}
-	
 	@Override
 	public String toString() {
 		return "This is a circle with radius of length: " + radius;
 	}
-
 }

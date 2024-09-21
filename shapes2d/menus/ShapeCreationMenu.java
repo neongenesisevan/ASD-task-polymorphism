@@ -23,6 +23,10 @@ public class ShapeCreationMenu implements Menu {
         System.out.println("y: ");
         int y = sc.nextInt();
 
+        /* shapes are created this way to separate the user interface from the  data
+         * and i dont want scanners in shapes
+         */
+
 
         switch (input) {
             case 0:

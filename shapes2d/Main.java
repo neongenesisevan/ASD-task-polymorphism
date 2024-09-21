@@ -15,7 +15,6 @@ public class Main {
 
 	protected static void init() {
 
-		//String me = "World 0";
 		World world = instanceData.newWorld();
 		JFrame fr = new JFrame();
 
@@ -23,8 +22,6 @@ public class Main {
 
 		fr.setBounds(50, 50, 450, 500);
 		fr.setDefaultCloseOperation(3);
-
-		//world.execute(me);
 
 		fr.add(world.drawer);
 		fr.setVisible(true);

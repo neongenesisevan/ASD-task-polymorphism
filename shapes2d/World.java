@@ -20,12 +20,6 @@ public class World {
     public String toString() {
         return this.name;
     }
-    /*
-    public void execute(String name) {
-        this.name = name;
-    }
-
-     */
 
     public void addShape(Geom2D shape, int positionX, int positionY) {
         shapesList.add(new ShapeEntity(shape, positionX, positionY));

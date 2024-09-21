@@ -4,7 +4,6 @@ import polygon.Geom2D;
 
 import java.awt.Color;
 import java.awt.Graphics;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -20,24 +19,22 @@ public class RightTriangle implements Geom2D {
 
 	@Override
 	public double getArea() {
-		// Area = 1/2 * base * height
+
 		return 0.5 * base * height;
 	}
 
 	@Override
 	public double getPerimeter() {
-		// Perimeter = base + height + hypotenuse
 		double hypotenuse = Math.sqrt(Math.pow(base, 2) + Math.pow(height, 2));
 		return base + height + hypotenuse;
 	}
 
 	@Override
 	public void drawShape(Graphics g, int offsetX, int offsetY) {
-		// Draw a right triangle using three points: (offsetX, offsetY), (offsetX + base, offsetY), and (offsetX, offsetY + height)
 		int[] xPoints = { offsetX, offsetX + base, offsetX };
 		int[] yPoints = { offsetY, offsetY, offsetY + height };
 		g.setColor(Color.yellow);
-		g.fillPolygon(xPoints, yPoints, 3); // Drawing a filled triangle with 3 points
+		g.fillPolygon(xPoints, yPoints, 3);
 	}
 
 	@Override
@@ -50,7 +47,7 @@ public class RightTriangle implements Geom2D {
 		JPanel pn1 = new JPanel() {
 			@Override
 			public void paint(Graphics g) {
-				drawShape(g, 50, 50); // Draw the triangle at (50, 50)
+				drawShape(g, 50, 50);
 			}
 		};
 		

@@ -1,8 +1,6 @@
 package shapes2d.menus;
 
-import shapes2d.InstanceData;
 import shapes2d.Main;
-import shapes2d.World;
 
 public class WorldSelectionMenu implements Menu {
 
